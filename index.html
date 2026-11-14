@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SPACE RELICS | The Mission Ended</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <a class="logo" href="#home">SPACE RELICS</a>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#explore">Explore</a>
+    <a href="#stories">Stories</a>
+    <a href="#quiz">Quiz</a>
+    <a href="#sources">Sources</a>
+  </nav>
+</header>
+
+<section id="home" class="hero">
+  <p class="eyebrow">A DIGITAL MUSEUM OF SPACE EXPLORATION</p>
+  <h1>The mission ended.<br><span>The story didn't.</span></h1>
+  <p>
+    Discover the machines and equipment humanity left
+    behind on the Moon and Mars.
+  </p>
+  <a class="btn" href="#explore">EXPLORE THE RELICS ↓</a>
+</section>
+
+<section id="explore" class="section">
+  <p class="eyebrow">THE ARCHIVE</p>
+  <h2>Forgotten by time.<br>Remembered by science.</h2>
+
+  <div class="filters">
+    <button onclick="filterObjects('All')">All</button>
+    <button onclick="filterObjects('Mars')">Mars</button>
+    <button onclick="filterObjects('Moon')">Moon</button>
+  </div>
+
+  <div id="artifact-grid" class="grid"></div>
+</section>
+
+<section id="stories" class="section">
+  <p class="eyebrow">MISSION ARCHIVES</p>
+  <h2>Seven minutes to another world.</h2>
+  <p>
+    Follow Perseverance through its entry, descent
+    and landing on Mars.
+  </p>
+  <img class="wide-image"
+       src="assets/mars-landing.jpg"
+       alt="Perseverance landing sequence">
+
+  <div class="timeline">
+    <div>01 · Atmospheric entry</div>
+    <div>02 · Heat shield separation</div>
+    <div>03 · Parachute deployment</div>
+    <div>04 · Backshell separation</div>
+    <div>05 · Powered descent</div>
+    <div>06 · Sky crane touchdown</div>
+  </div>
+</section>
+
+<section class="section legacy">
+  <p class="eyebrow">THE SCIENCE LEGACY</p>
+  <h2>They left the surface.<br>They never left science.</h2>
+  <p>
+    Discarded equipment can still teach us about
+    engineering, planetary environments and
+    the challenges of exploring other worlds.
+  </p>
+</section>
+
+<section id="quiz" class="section">
+  <p class="eyebrow">YOUNG EXPLORERS</p>
+  <h2>Space detective challenge</h2>
+  <div id="quiz-area"></div>
+</section>
+
+<section id="sources" class="section">
+  <h2>Explore the original evidence</h2>
+  <ul>
+    <li><a href="https://science.nasa.gov/resource/perseverance-and-mars-2020-spacecraft-components-on-the-surface/">
+      Perseverance landing components
+    </a></li>
+    <li><a href="https://science.nasa.gov/resource/debris-field-from-perseverance-landing-gear-seen-by-mars-helicopter/">
+      Mars landing debris
+    </a></li>
+    <li><a href="https://science.nasa.gov/mission/surveyor-3/">
+      Surveyor 3 mission
+    </a></li>
+    <li><a href="https://www.nasa.gov/wp-content/uploads/static/history/humanartifacts.html">
+      Moon artifact catalogue
+    </a></li>
+  </ul>
+  <p>
+    Independent educational project by Guardians of Galaxy.
+    NASA imagery and information are credited to their
+    respective sources.
+  </p>
+</section>
+
+<footer>
+  SPACE RELICS · GUARDIANS OF GALAXY · 2026
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
