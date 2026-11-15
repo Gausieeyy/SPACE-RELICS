@@ -175,3 +175,45 @@ function restartQuiz() {
 }
 
 showQuestion();
+
+/* ===== SCROLL REVEAL ANIMATIONS ===== */
+
+const revealItems = document.querySelectorAll(
+  ".section, .timeline div, .card"
+);
+
+revealItems.forEach(item => {
+  item.classList.add("reveal");
+});
+
+const revealStyle = document.createElement("style");
+
+revealStyle.textContent = `
+  .reveal {
+    opacity: 0;
+    transform: translateY(35px);
+    transition: opacity .8s ease, transform .8s ease;
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
+
+document.head.appendChild(revealStyle);
+
+const revealObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, {
+  threshold: 0.12
+});
+
+revealItems.forEach(item => {
+  revealObserver.observe(item);
+});
